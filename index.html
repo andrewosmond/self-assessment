@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="app-version" content="1.1.7">
+	<link rel="icon" href="assets/favicon.ico">
+	<title>BCA Self Assessment</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700%7Csans-serif" media="all">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="success">
+	<div id="root">
+		<div class="container">
+			<div class="justify-content-center row">
+				<div class="pb-4 col-lg-6 col-md-8 col-sm-10 col-12">
+					<img src="assets/logo.png" alt="BCA Logo" title="BCA Logo" class="logo">
+					<section class="animated fadeIn text-center text-white mt-4">
+						<h5 id="date" class="text-white m-0"></h5>
+						<h2 class="text-white m-0">070499</h2>
+						<h4 class="text-white m-0">Andrew Osmond</h4>
+						<p class="lead m-0">GSIT</p>
+						<p class="lead"></p>
+					</section>
+					<div class="animated fadeIn mt-5 card">
+						<div class="flex-centered pt-5 card-body">
+							<section class="px-3">
+								<div class="marker-circle absolute-top success flex-centered">
+									<img src="assets/check.png" alt="Check Mark Icon" title="Check Mark Icon" class style="height: 2.75rem;">
+								</div>
+								<h5 class="text-success">
+									Risiko Kecil /
+									<i>Low Risk</i>
+								</h5>
+								<strong class="d-block text-muted text-uppercase">Diperkenankan masuk</strong>
+								<p class="text-muted">Namun dilakukan pemeriksaan suhu di pintu masuk area BCA.</p>
+								<strong class="d-block text-muted text-uppercase">
+									<i>Entry is allowed</i>
+								</strong>
+								<p class="text-muted">
+									<i>Check your temperature at the entrance of BCA’s premises.</i>
+								</p>
+							</section>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+		var days = ["MINGGU", "SENIN", "SELASA", "RABU", "KAMIS", "JUMAT", "SABTU"];
+		var months = ["JANUARI", "FEBRUARI", "MARET", "APRIL", "MEI", "JUNI", "JULI", "AGUSTUS", "SEPTEMBER", "OKTOBER", "NOVEMBER", "DESEMBER"];
+
+		var today = new Date();
+		var dayDate = String(today.getDate()).padStart(2, '0');
+		var day = today.getDay();
+		var month = today.getMonth();
+		var yyyy = today.getFullYear();
+
+		var date = days[day] + ", " + dayDate + " " + months[month] + " " + yyyy;
+		document.getElementById("date").innerHTML = date;
+		console.log(date);
+	</script>
+</body>
+</html>
